@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/cattleListFragment"
+        android:icon="@drawable/ic_cow"
+        android:title="My Cattle" />
+    <item
+        android:id="@+id/milkDiaryFragment"
+        android:icon="@drawable/ic_milk"
+        android:title="Milk Diary" />
+    <item
+        android:id="@+id/vaccinationFragment"
+        android:icon="@drawable/ic_syringe"
+        android:title="Vaccines" />
+    <item
+        android:id="@+id/yieldGraphFragment"
+        android:icon="@drawable/ic_graph"
+        android:title="Analytics" />
+</menu>

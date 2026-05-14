@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cattleListFragment">
+
+    <fragment android:id="@+id/cattleListFragment"
+        android:name="com.bhagyashreereddy.gokulahealth.ui.cattle.CattleListFragment"
+        android:label="My Cattle">
+        <action android:id="@+id/action_list_to_add"
+            app:destination="@id/addCattleFragment" />
+        <action android:id="@+id/action_list_to_detail"
+            app:destination="@id/cattleDetailFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/addCattleFragment"
+        android:name="com.bhagyashreereddy.gokulahealth.ui.cattle.AddCattleFragment"
+        android:label="Add Cattle" />
+
+    <fragment android:id="@+id/cattleDetailFragment"
+        android:name="com.bhagyashreereddy.gokulahealth.ui.cattle.CattleDetailFragment"
+        android:label="Cattle Details">
+        <argument android:name="cattleId" app:argType="integer" />
+        <action android:id="@+id/action_detail_to_milk"
+            app:destination="@id/milkDiaryFragment" />
+        <action android:id="@+id/action_detail_to_graph"
+            app:destination="@id/yieldGraphFragment" />
+        <action android:id="@+id/action_detail_to_vaccine"
+            app:destination="@id/vaccinationFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/milkDiaryFragment"
+        android:name="com.bhagyashreereddy.gokulahealth.ui.milk.MilkDiaryFragment"
+        android:label="Milk Diary">
+        <argument android:name="cattleId" app:argType="integer" android:defaultValue="1" />
+    </fragment>
+
+    <fragment android:id="@+id/vaccinationFragment"
+        android:name="com.bhagyashreereddy.gokulahealth.ui.vaccination.VaccinationFragment"
+        android:label="Vaccinations">
+        <argument android:name="cattleId" app:argType="integer" android:defaultValue="1" />
+    </fragment>
+
+    <fragment android:id="@+id/yieldGraphFragment"
+        android:name="com.bhagyashreereddy.gokulahealth.ui.graph.YieldGraphFragment"
+        android:label="Yield Graph">
+        <argument android:name="cattleId" app:argType="integer" android:defaultValue="1" />
+    </fragment>
+
+    <fragment android:id="@+id/adminPanelFragment"
+        android:name="com.bhagyashreereddy.gokulahealth.ui.admin.AdminPanelFragment"
+        android:label="Admin Panel" />
+</navigation>
