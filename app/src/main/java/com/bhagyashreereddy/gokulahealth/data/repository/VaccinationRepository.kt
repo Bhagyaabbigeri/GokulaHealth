@@ -3,8 +3,11 @@ package com.bhagyashreereddy.gokulahealth.data.repository
 import androidx.lifecycle.LiveData
 import com.bhagyashreereddy.gokulahealth.data.db.dao.VaccinationDao
 import com.bhagyashreereddy.gokulahealth.data.db.entity.Vaccination
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class VaccinationRepository(private val vaccinationDao: VaccinationDao) {
+@Singleton
+class VaccinationRepository @Inject constructor(private val vaccinationDao: VaccinationDao) {
 
     fun getVaccinationsForCattle(cattleId: Int): LiveData<List<Vaccination>> =
         vaccinationDao.getVaccinationsForCattle(cattleId)

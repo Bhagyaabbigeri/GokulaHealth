@@ -3,8 +3,11 @@ package com.bhagyashreereddy.gokulahealth.data.repository
 import androidx.lifecycle.LiveData
 import com.bhagyashreereddy.gokulahealth.data.db.dao.MilkEntryDao
 import com.bhagyashreereddy.gokulahealth.data.db.entity.MilkEntry
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class MilkRepository(private val milkEntryDao: MilkEntryDao) {
+@Singleton
+class MilkRepository @Inject constructor(private val milkEntryDao: MilkEntryDao) {
 
     fun getLast30DaysEntries(cattleId: Int): LiveData<List<MilkEntry>> =
         milkEntryDao.getLast30DaysEntries(cattleId)

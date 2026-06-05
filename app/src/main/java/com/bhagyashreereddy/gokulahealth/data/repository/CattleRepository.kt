@@ -3,8 +3,11 @@ package com.bhagyashreereddy.gokulahealth.data.repository
 import androidx.lifecycle.LiveData
 import com.bhagyashreereddy.gokulahealth.data.db.dao.CattleDao
 import com.bhagyashreereddy.gokulahealth.data.db.entity.Cattle
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class CattleRepository(private val cattleDao: CattleDao) {
+@Singleton
+class CattleRepository @Inject constructor(private val cattleDao: CattleDao) {
 
     val allCattle: LiveData<List<Cattle>> = cattleDao.getAllCattle()
 

@@ -15,7 +15,9 @@ import com.bhagyashreereddy.gokulahealth.utils.DateUtils
 import java.util.*
 
 import androidx.navigation.fragment.navArgs
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class VaccinationFragment : Fragment() {
     private var _binding: FragmentVaccinationBinding? = null
     private val binding get() = _binding!!

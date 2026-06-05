@@ -11,8 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bhagyashreereddy.gokulahealth.data.db.entity.MilkEntry
 import com.bhagyashreereddy.gokulahealth.databinding.FragmentMilkDiaryBinding
 import com.bhagyashreereddy.gokulahealth.utils.DateUtils
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
+@AndroidEntryPoint
 class MilkDiaryFragment : Fragment() {
 
     private var _binding: FragmentMilkDiaryBinding? = null

@@ -11,7 +11,9 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.bhagyashreereddy.gokulahealth.databinding.FragmentYieldGraphBinding
 import com.bhagyashreereddy.gokulahealth.ui.milk.MilkViewModel
 import com.bhagyashreereddy.gokulahealth.ui.factory.FactoryViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class YieldGraphFragment : Fragment() {
 
     private var _binding: FragmentYieldGraphBinding? = null

@@ -1,20 +1,16 @@
 package com.bhagyashreereddy.gokulahealth.ui.vaccination
 
-import android.app.Application
 import androidx.lifecycle.*
-import com.bhagyashreereddy.gokulahealth.data.db.AppDatabase
 import com.bhagyashreereddy.gokulahealth.data.db.entity.Vaccination
 import com.bhagyashreereddy.gokulahealth.data.repository.VaccinationRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class VaccinationViewModel(application: Application) : AndroidViewModel(application) {
-
+@HiltViewModel
+class VaccinationViewModel @Inject constructor(
     private val repository: VaccinationRepository
-
-    init {
-        val dao = AppDatabase.getDatabase(application).vaccinationDao()
-        repository = VaccinationRepository(dao)
-    }
+) : ViewModel() {
 
     fun getVaccinations(cattleId: Int): LiveData<List<Vaccination>> =
         repository.getVaccinationsForCattle(cattleId)

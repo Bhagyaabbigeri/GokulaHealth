@@ -10,7 +10,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bhagyashreereddy.gokulahealth.databinding.FragmentCattleDetailBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CattleDetailFragment : Fragment() {
 
     private var _binding: FragmentCattleDetailBinding? = null

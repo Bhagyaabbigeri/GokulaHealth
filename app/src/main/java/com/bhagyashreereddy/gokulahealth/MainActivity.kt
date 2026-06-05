@@ -8,7 +8,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.bhagyashreereddy.gokulahealth.databinding.ActivityMainBinding
 import com.bhagyashreereddy.gokulahealth.notification.NotificationHelper
 import com.bhagyashreereddy.gokulahealth.notification.VaccinationWorker
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

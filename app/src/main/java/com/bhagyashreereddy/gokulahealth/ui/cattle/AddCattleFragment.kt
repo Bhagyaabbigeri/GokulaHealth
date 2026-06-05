@@ -14,7 +14,9 @@ import com.bhagyashreereddy.gokulahealth.data.db.entity.Factory
 import com.bhagyashreereddy.gokulahealth.databinding.FragmentAddCattleBinding
 import com.bhagyashreereddy.gokulahealth.ui.factory.FactoryViewModel
 import com.bhagyashreereddy.gokulahealth.utils.ImageUtils
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AddCattleFragment : Fragment() {
 
     private var _binding: FragmentAddCattleBinding? = null

@@ -1,22 +1,18 @@
 package com.bhagyashreereddy.gokulahealth.ui.cattle
 
-import android.app.Application
 import androidx.lifecycle.*
-import com.bhagyashreereddy.gokulahealth.data.db.AppDatabase
 import com.bhagyashreereddy.gokulahealth.data.db.entity.Cattle
 import com.bhagyashreereddy.gokulahealth.data.repository.CattleRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class CattleViewModel(application: Application) : AndroidViewModel(application) {
-
+@HiltViewModel
+class CattleViewModel @Inject constructor(
     private val repository: CattleRepository
-    val allCattle: LiveData<List<Cattle>>
+) : ViewModel() {
 
-    init {
-        val cattleDao = AppDatabase.getDatabase(application).cattleDao()
-        repository = CattleRepository(cattleDao)
-        allCattle = repository.allCattle
-    }
+    val allCattle: LiveData<List<Cattle>> = repository.allCattle
 
     fun insertCattle(cattle: Cattle) = viewModelScope.launch {
         repository.insertCattle(cattle)

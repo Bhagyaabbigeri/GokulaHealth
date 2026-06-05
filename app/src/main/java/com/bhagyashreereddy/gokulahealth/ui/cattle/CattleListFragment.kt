@@ -10,7 +10,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bhagyashreereddy.gokulahealth.R
 import com.bhagyashreereddy.gokulahealth.databinding.FragmentCattleListBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CattleListFragment : Fragment() {
     private var _binding: FragmentCattleListBinding? = null
     private val binding get() = _binding!!

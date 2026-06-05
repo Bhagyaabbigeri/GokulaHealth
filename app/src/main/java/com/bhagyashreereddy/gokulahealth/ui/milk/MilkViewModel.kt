@@ -1,22 +1,19 @@
 package com.bhagyashreereddy.gokulahealth.ui.milk
 
-import android.app.Application
 import androidx.lifecycle.*
-import com.bhagyashreereddy.gokulahealth.data.db.AppDatabase
 import com.bhagyashreereddy.gokulahealth.data.db.entity.MilkEntry
 import com.bhagyashreereddy.gokulahealth.data.repository.MilkRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MilkViewModel(application: Application) : AndroidViewModel(application) {
-
+@HiltViewModel
+class MilkViewModel @Inject constructor(
     private val repository: MilkRepository
+) : ViewModel() {
+
     private val _monthlyAverage = MutableLiveData<Float>()
     val monthlyAverage: LiveData<Float> = _monthlyAverage
-
-    init {
-        val dao = AppDatabase.getDatabase(application).milkEntryDao()
-        repository = MilkRepository(dao)
-    }
 
     fun getMilkEntries(cattleId: Int): LiveData<List<MilkEntry>> =
         repository.getLast30DaysEntries(cattleId)

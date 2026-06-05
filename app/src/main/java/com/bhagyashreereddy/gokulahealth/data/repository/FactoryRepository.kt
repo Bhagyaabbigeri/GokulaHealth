@@ -4,8 +4,11 @@ import androidx.lifecycle.LiveData
 import com.bhagyashreereddy.gokulahealth.data.db.dao.FactoryDao
 import com.bhagyashreereddy.gokulahealth.data.db.dao.FactoryYield
 import com.bhagyashreereddy.gokulahealth.data.db.entity.Factory
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class FactoryRepository(private val factoryDao: FactoryDao) {
+@Singleton
+class FactoryRepository @Inject constructor(private val factoryDao: FactoryDao) {
 
     fun getAllFactories(): LiveData<List<Factory>> = factoryDao.getAllFactories()
 

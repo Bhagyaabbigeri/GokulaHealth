@@ -10,10 +10,12 @@ import androidx.lifecycle.lifecycleScope
 import com.bhagyashreereddy.gokulahealth.data.db.AppDatabase
 import com.bhagyashreereddy.gokulahealth.databinding.FragmentAdminPanelBinding
 import com.bhagyashreereddy.gokulahealth.notification.NotificationHelper
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+@AndroidEntryPoint
 class AdminPanelFragment : Fragment() {
 
     private var _binding: FragmentAdminPanelBinding? = null
