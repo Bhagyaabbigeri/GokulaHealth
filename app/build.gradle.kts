@@ -76,7 +76,7 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
-    kapt("org.jetbrains.kotlin:kotlin-metadata-jvm:2.1.0")
+    kapt("org.jetbrains.kotlin:kotlin-metadata-jvm:1.9.24")
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
