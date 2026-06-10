@@ -4,6 +4,16 @@
 
 ---
 
+## 🧐 Why GokulaHealth?
+
+Traditional farm management often relies on manual paper logs, which are prone to errors and difficult to analyze. **GokulaHealth** bridges this gap by providing:
+* **Data Accuracy**: Digital logs for milk and health eliminate guesswork.
+* **Proactive Healthcare**: Never forget a vaccination with automated reminders.
+* **Economic Insights**: Understand your production trends to optimize farm profitability.
+* **Accessibility**: Designed for rural areas with full offline functionality.
+
+---
+
 ## 🌟 Key Features
 
 ### 🐄 Herd Management
@@ -29,17 +39,42 @@
 
 ---
 
+## 📸 Screenshots
+
+<p align="center">
+  <img src="./ScreenShots/GokulaHealth1.jpg" width="30%" alt="Dashboard" />
+  <img src="./ScreenShots/GokulaHealth2.jpg" width="30%" alt="Cattle List" />
+  <img src="./ScreenShots/GokulaHealth3.jpg" width="30%" alt="Cattle Details" />
+</p>
+
+<p align="center">
+  <img src="./ScreenShots/GokulaHealth4.jpg" width="30%" alt="Milk Production" />
+  <img src="./ScreenShots/GokulaHealth5.jpg" width="30%" alt="Analytics" />
+  <img src="./ScreenShots/GokulaHealth6.jpg" width="30%" alt="Vaccination" />
+</p>
+
+---
+
 ## 🛠️ Tech Stack & Architecture
 
-* **Language**: 100% [Kotlin](https://kotlinlang.org/)
-* **UI Framework**: **XML Layouts** with **Material Design 3**
-* **Architecture**: **MVVM** (Model-View-ViewModel) + Clean Architecture
-* **Dependency Injection**: [Hilt](https://dagger.dev/hilt/) (Dagger Hilt)
-* **Local Database**: [Room Persistence Library](https://developer.android.com/training/data-storage/room)
-* **Background Tasks**: [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager)
-* **Navigation**: [Jetpack Navigation Component](https://developer.android.com/guide/navigation) (Safe Args)
-* **View Binding**: Safe and efficient UI interactions.
+* **Language**: [Kotlin](https://kotlinlang.org/) (100%)
+* **Architecture**: MVVM (Model-View-ViewModel) + Clean Architecture
+* **UI**: XML Layouts with **Material Design 3**
+* **Local DB**: [Room](https://developer.android.com/training/data-storage/room) (v2.8.4)
+* **DI**: [Dagger Hilt](https://dagger.dev/hilt/) for dependency injection
+* **Background Processing**: [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager) for notification scheduling
+* **Navigation**: [Jetpack Navigation](https://developer.android.com/guide/navigation) with Safe Args
+* **Charts**: [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
 * **Image Loading**: [Glide](https://github.com/bumptech/glide)
+
+---
+
+## 🏗️ Core Components
+
+* **Room Persistence**: Stores cattle information, milk logs, and vaccination schedules locally.
+* **Hilt Dependency Injection**: Decouples components for better testability and scalability.
+* **LiveData & Coroutines**: Ensures smooth UI updates and efficient background data handling.
+* **WorkManager**: Handles precise scheduling for vaccination alerts, ensuring they fire even if the app is closed.
 
 ---
 
@@ -64,21 +99,41 @@ GokulaHealth/
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Roadmap
 
-### Prerequisites
-* Android Studio **Ladybug** (2024.2.1) or newer.
-* Android SDK 34 (Compile Sdk).
-* Java 17.
+- [ ] **Cloud Sync**: Firebase integration for data backup and multi-device support.
+- [ ] **PDF Reports**: Export monthly milk production and health reports.
+- [ ] **AI Insights**: Predictive analytics for future milk yield based on history.
+- [ ] **Multi-language Support**: Adding Hindi and Kannada for local farmers.
 
-### Installation
+---
+
+## 🚀 How to Run
+
+Follow these steps to get the project up and running on your local machine.
+
+### 📋 Prerequisites
+* **Android Studio**: [Ladybug (2024.2.1)](https://developer.android.com/studio) or newer.
+* **JDK**: Version 17.
+* **Android SDK**: API Level 34 (Android 14) recommended.
+* **Device**: A physical Android device or Emulator running **API 24 (Android 7.0)** or higher.
+
+### 📥 Installation
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/Bhagyaabbigeri/GokulaHealth.git
    ```
-2. **Open in Android Studio**: Select the root folder of the project.
-3. **Gradle Sync**: Wait for the project to download dependencies.
-4. **Run**: Deploy to a physical device or emulator (API 24+).
+2. **Open the Project**: Launch Android Studio and select **Open**, then navigate to the cloned `GokulaHealth` directory.
+
+### 🔨 Building the Project
+1. **Sync Gradle**: Once the project opens, wait for the automatic Gradle sync to complete. If it doesn't start, click **File > Sync Project with Gradle Files**.
+2. **Build**: Click on **Build > Make Project** (or press `Ctrl+F9`) to compile the app.
+
+### 🏃 Running the App
+1. **Connect Device**: Plug in your Android device via USB (with Developer Options and USB Debugging enabled) or start an Emulator.
+2. **Select Run Configuration**: Ensure the `app` module is selected in the run configuration dropdown.
+3. **Launch**: Click the **Run** button (green play icon) or press `Shift+F10`.
+4. **Grant Permissions**: Upon first launch, the app may request notification permissions to provide vaccination reminders.
 
 ---
 
