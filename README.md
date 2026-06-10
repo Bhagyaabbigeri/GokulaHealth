@@ -42,15 +42,15 @@ Traditional farm management often relies on manual paper logs, which are prone t
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./ScreenShots/GokulaHealth1.jpg" width="30%" alt="Dashboard" />
-  <img src="./ScreenShots/GokulaHealth2.jpg" width="30%" alt="Cattle List" />
-  <img src="./ScreenShots/GokulaHealth3.jpg" width="30%" alt="Cattle Details" />
+  <img src="./screenshots/GokulaHealth1.jpg" width="30%" alt="Dashboard" />
+  <img src="./screenshots/GokulaHealth2.jpg" width="30%" alt="Cattle List" />
+  <img src="./screenshots/GokulaHealth3.jpg" width="30%" alt="Cattle Details" />
 </p>
 
 <p align="center">
-  <img src="./ScreenShots/GokulaHealth4.jpg" width="30%" alt="Milk Production" />
-  <img src="./ScreenShots/GokulaHealth5.jpg" width="30%" alt="Analytics" />
-  <img src="./ScreenShots/GokulaHealth6.jpg" width="30%" alt="Vaccination" />
+  <img src="./screenshots/GokulaHealth4.jpg" width="30%" alt="Milk Production" />
+  <img src="./screenshots/GokulaHealth5.jpg" width="30%" alt="Analytics" />
+  <img src="./screenshots/GokulaHealth6.jpg" width="30%" alt="Vaccination" />
 </p>
 
 ---
