@@ -27,22 +27,6 @@
 * **Robust Data**: Full offline capability using **Room Database**, essential for remote farm locations.
 * **Background Sync**: Architecture ready for future cloud synchronization.
 
-## 📸 Screenshots
-
-<p align="center">
-  <img src="app/ScreenShots/GokulaHealth1.png.jpeg" width="32%" alt="Dashboard" />
-  <img src="app/ScreenShots/GokulaHealth2.png.jpeg" width="32%" alt="Cattle List" />
-  <img src="app/ScreenShots/GokulaHealth3.png.jpeg" width="32%" alt="Milk Production" />
-</p>
-<p align="center">
-  <img src="app/ScreenShots/GokulaHealth4.png.jpeg" width="32%" alt="Yield Analytics" />
-  <img src="app/ScreenShots/GokulaHealth5.png.jpeg" width="32%" alt="Vaccination Schedule" />
-  <img src="app/ScreenShots/GokulaHealth6.png.jpeg" width="32%" alt="Admin Panel" />
-</p>
-<p align="center">
-  <img src="app/ScreenShots/GokulaHealth7.png.jpeg" width="32%" alt="Cattle Profile" />
-</p>
-
 ---
 
 ## 🛠️ Tech Stack & Architecture
